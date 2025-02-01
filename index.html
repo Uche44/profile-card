@@ -17,7 +17,10 @@
     />
   </head>
   <body>
-    <div class="date-container">
+    <div
+      class="date-container"
+      data-testid="currentTimeUTC"
+    >
       <h5 id="hour-text"></h5>
       :
       <h5 id="minute-text"></h5>
@@ -58,7 +61,7 @@
           </div>
           <div id="light-dark">
             <i class="fa-solid fa-moon"></i>
-            <i class="fa-solid fa-sun"></i>
+            <!-- <i class="fa-solid fa-sun"></i> -->
           </div>
         </div>
         <h1 data-testid="fullName">PERPETUAL ASOGWA</h1>
@@ -90,20 +93,28 @@
           alt="Profile Picture"
           class="img-page2"
         />
-        <p class="about">The Web Aesthetician</p>
+        <p class="brief-about">The Web Aesthetician</p>
         <div class="bio">
           <div class="banner2">
-            <span id="about">About Perpetual</span>
-            <span id="contact">Contact</span>
+            <span
+              id="about-title"
+              tabindex="0"
+              >About Perpetual</span
+            >
+            <span
+              id="contact-title"
+              tabindex="0"
+              >Contact</span
+            >
           </div>
           <div class="bio-content">
-            <p class="bio-text">
+            <p class="bio-text show">
               A passionate Frontend Developer crafting sleek, high-performance
               UIs with React, Tailwind CSS, and cutting-edge tech. Passionate
               about clean code and seamless user experiences, she turns ideas
               into stunning digital reality. 🚀✨
             </p>
-            <p class="contact-text">Tel: 09136601904</p>
+            <p class="contact-text hide">Tel: 09136601904</p>
           </div>
         </div>
       </div>

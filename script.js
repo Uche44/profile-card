@@ -15,12 +15,36 @@ backBtn.addEventListener("click", () => {
   pageOne.classList.replace("hidden", "flex");
 });
 
-// to create date
-const h5 = document.querySelector("h5");
-const date = new Date();
+// to create current date
+
+const hourText = document.querySelector("#hour-text");
+const minuteText = document.querySelector("#minute-text");
+const secondText = document.querySelector("#second-text");
+
 function getCurrentDate() {
+  const date = new Date();
   const hours = date.getUTCHours();
   const minutes = date.getUTCMinutes();
-  const second = date.getUTCSeconds();
+  const seconds = date.getUTCSeconds();
+  hourText.textContent = hours.toString().padStart(2, "0");
+  minuteText.textContent = minutes.toString().padStart(2, "0");
+  secondText.textContent = seconds.toString().padStart(2, "0");
 }
-h5.textContent = date.toUTCString();
+
+setInterval(getCurrentDate, 1000);
+
+// logic for about section
+const aboutHeader = document.querySelector("#about-title"),
+  contactHeader = document.querySelector("#contact-title"),
+  bio = document.querySelector(".bio-text"),
+  contact = document.querySelector(".contact-text");
+// show about
+contactHeader.addEventListener("click", () => {
+  contactHeader.classList.add("active-span");
+  bio.classList.replace("show", "hide");
+  contact.classList.replace("hide", "show");
+});
+aboutHeader.addEventListener("click", () => {
+  bio.classList.replace("hide", "show");
+  contact.classList.replace("show", "hide");
+});
