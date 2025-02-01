@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>My Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body>
+    <div class="date-container">
+      <h5 id="hour-text"></h5>
+      :
+      <h5 id="minute-text"></h5>
+      :
+      <h5 id="second-text"></h5>
+    </div>
+    <section class="card">
+      <div class="page1 flex">
+        <div class="banner">
+          <div class="color-toggle">
+            <a
+              href="https://www.linkedin.com/in/perpetual-uchechukwu-798b51262"
+              target="_blank"
+            >
+              <i
+                class="fa-brands fa-linkedin"
+                data-testid="socialLinks"
+              ></i>
+            </a>
+            <a
+              href="https://x.com/perpetualuchec5"
+              target="_blank"
+            >
+              <i
+                class="fa-brands fa-square-twitter"
+                data-testid="socialLinks"
+              ></i>
+            </a>
+            <a
+              href="https://github.com/Uche44"
+              target="_blank"
+            >
+              <i
+                class="fa-brands fa-square-github"
+                data-testid="socialLinks"
+              ></i>
+            </a>
+          </div>
+          <div id="light-dark">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
+          </div>
+        </div>
+        <h1 data-testid="fullName">PERPETUAL ASOGWA</h1>
+        <p
+          class="desc"
+          data-testid="jobTitle"
+        >
+          Frontend React Developer
+        </p>
+        <img
+          src="/images/image1.png"
+          alt=""
+          class="prof-img"
+          data-testid="profilePicture"
+        />
+        <button class="show-details">MORE</button>
+      </div>
+      <div class="page2 hidden">
+        <i class="fa-solid fa-arrow-left back"></i>
+        <h2 class="page2">PERPETUAL ASOGWA</h2>
+        <p
+          class="email"
+          data-testid="emailAddress"
+        >
+          perpetualuchechukwu808@gmail.com
+        </p>
+        <img
+          src="images/image1.png"
+          alt="Profile Picture"
+          class="img-page2"
+        />
+        <p class="about">The Web Aesthetician</p>
+        <div class="bio">
+          <div class="banner2">
+            <span id="about">About Perpetual</span>
+            <span id="contact">Contact</span>
+          </div>
+          <div class="bio-content">
+            <p class="bio-text">
+              A passionate Frontend Developer crafting sleek, high-performance
+              UIs with React, Tailwind CSS, and cutting-edge tech. Passionate
+              about clean code and seamless user experiences, she turns ideas
+              into stunning digital reality. 🚀✨
+            </p>
+            <p class="contact-text">Tel: 09136601904</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
