@@ -107,17 +107,39 @@
               >Contact</span
             >
           </div>
-          <div class="bio-content">
-            <p class="bio-text show">
-              A passionate Frontend Developer crafting sleek, high-performance
-              UIs with React, Tailwind CSS, and cutting-edge tech. Passionate
-              about clean code and seamless user experiences, she turns ideas
-              into stunning digital reality. 🚀✨
-            </p>
-            <p class="contact-text hide">Tel: 09136601904</p>
+          <div class="wrapper">
+            <!-- bio box -->
+            <div class="bio-content flex">
+              <p
+                class="bio-text"
+                data-testid="shortBio"
+              >
+                A passionate Frontend Developer crafting sleek, high-performance
+                UIs with React, Tailwind CSS, and cutting-edge tech. Passionate
+                about clean code and seamless user experiences, she turns ideas
+                into stunning digital reality. 🚀✨
+              </p>
+            </div>
+            <!-- contact box -->
+            <div class="contact-box hidden">
+              <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p
+                  class="location"
+                  data-testid="currentLocation"
+                >
+                  Nsukka, Nigeria
+                </p>
+              </div>
+              <div class="tel">
+                <i class="fa-solid fa-phone"></i>
+                <p class="tel">09136601904</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <!-- <h5 class="loc">tgegr</h5> -->
     </section>
     <script src="script.js"></script>
   </body>

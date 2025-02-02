@@ -34,17 +34,19 @@ function getCurrentDate() {
 setInterval(getCurrentDate, 1000);
 
 // logic for about section
-const aboutHeader = document.querySelector("#about-title"),
-  contactHeader = document.querySelector("#contact-title"),
-  bio = document.querySelector(".bio-text"),
-  contact = document.querySelector(".contact-text");
+const aboutHeader = document.querySelector("#about-title");
+const contactHeader = document.querySelector("#contact-title");
+const bioContent = document.querySelector(".bio-content");
+const contactBox = document.querySelector(".contact-box");
 // show about
 contactHeader.addEventListener("click", () => {
-  contactHeader.classList.add("active-span");
-  bio.classList.replace("show", "hide");
-  contact.classList.replace("hide", "show");
+  contactHeader.classList.toggle("active-span");
+  bioContent.classList.replace("flex", "hidden");
+  contactBox.classList.replace("hidden", "flex");
 });
 aboutHeader.addEventListener("click", () => {
-  bio.classList.replace("hide", "show");
-  contact.classList.replace("show", "hide");
+  contactBox.classList.replace("flex", "hidden");
+  bioContent.classList.replace("hidden", "flex");
 });
+
+// location logic
