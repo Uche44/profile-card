@@ -4,15 +4,13 @@ const pageTwo = document.querySelector(".page2");
 const backBtn = document.querySelector(".back");
 
 showNextPageBtn.addEventListener("click", () => {
-  setTimeout(() => {
-    pageOne.classList.replace("flex", "hidden");
-    pageTwo.classList.replace("hidden", "flex");
-  }, 400);
+  pageOne.style.display = "none";
+  pageTwo.classList.add("show");
 });
 // returning back logic
 backBtn.addEventListener("click", () => {
-  pageTwo.classList.replace("flex", "hidden");
-  pageOne.classList.replace("hidden", "flex");
+  pageTwo.classList.remove("show");
+  pageOne.style.display = "flex";
 });
 
 // to create current date
@@ -32,21 +30,3 @@ function getCurrentDate() {
 }
 
 setInterval(getCurrentDate, 1000);
-
-// logic for about section
-const aboutHeader = document.querySelector("#about-title");
-const contactHeader = document.querySelector("#contact-title");
-const bioContent = document.querySelector(".bio-content");
-const contactBox = document.querySelector(".contact-box");
-// show about
-contactHeader.addEventListener("click", () => {
-  contactHeader.classList.toggle("active-span");
-  bioContent.classList.replace("flex", "hidden");
-  contactBox.classList.replace("hidden", "flex");
-});
-aboutHeader.addEventListener("click", () => {
-  contactBox.classList.replace("flex", "hidden");
-  bioContent.classList.replace("hidden", "flex");
-});
-
-// location logic

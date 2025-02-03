@@ -28,10 +28,11 @@
       <h5 id="second-text"></h5>
     </div>
     <section class="card">
-      <div class="page1 flex">
+      <div class="page1">
         <div class="banner">
-          <div class="color-toggle">
+          <div class="social-links">
             <a
+              class="icon"
               href="https://www.linkedin.com/in/perpetual-uchechukwu-798b51262"
               target="_blank"
             >
@@ -41,6 +42,7 @@
               ></i>
             </a>
             <a
+              class="icon"
               href="https://x.com/perpetualuchec5"
               target="_blank"
             >
@@ -59,10 +61,10 @@
               ></i>
             </a>
           </div>
-          <div id="light-dark">
+          <!-- <div id="light-dark">
             <i class="fa-solid fa-moon"></i>
-            <!-- <i class="fa-solid fa-sun"></i> -->
-          </div>
+            <i class="fa-solid fa-sun"></i>
+          </div> -->
         </div>
         <h1 data-testid="fullName">PERPETUAL ASOGWA</h1>
         <p
@@ -79,8 +81,7 @@
         />
         <button class="show-details">MORE</button>
       </div>
-      <div class="page2 hidden">
-        <i class="fa-solid fa-arrow-left back"></i>
+      <div class="page2">
         <h2 class="page2">PERPETUAL ASOGWA</h2>
         <p
           class="email"
@@ -94,34 +95,19 @@
           class="img-page2"
         />
         <p class="brief-about">The Web Aesthetician</p>
+        <i class="fa-solid fa-arrow-left-long back"></i>
         <div class="bio">
-          <div class="banner2">
-            <span
-              id="about-title"
-              tabindex="0"
-              >About Perpetual</span
+          <div class="bio-content">
+            <p
+              class="bio-text"
+              data-testid="shortBio"
             >
-            <span
-              id="contact-title"
-              tabindex="0"
-              >Contact</span
-            >
-          </div>
-          <div class="wrapper">
-            <!-- bio box -->
-            <div class="bio-content flex">
-              <p
-                class="bio-text"
-                data-testid="shortBio"
-              >
-                A passionate Frontend Developer crafting sleek, high-performance
-                UIs with React, Tailwind CSS, and cutting-edge tech. Passionate
-                about clean code and seamless user experiences, she turns ideas
-                into stunning digital reality. 🚀✨
-              </p>
-            </div>
-            <!-- contact box -->
-            <div class="contact-box hidden">
+              A passionate Frontend Developer crafting sleek, high-performance
+              UIs with React, Tailwind CSS, and cutting-edge tech. Passionate
+              about clean code and seamless user experiences, she turns ideas
+              into stunning digital reality. 🚀✨
+            </p>
+            <div class="contact-box">
               <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
                 <p
@@ -139,7 +125,6 @@
           </div>
         </div>
       </div>
-      <!-- <h5 class="loc">tgegr</h5> -->
     </section>
     <script src="script.js"></script>
   </body>

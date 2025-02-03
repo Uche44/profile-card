@@ -4,15 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-div,
-section {
-  border: 1px solid;
-}
-/* may not be needed */
-.fa-moon {
-  justify-self: flex-end;
-  margin-left: 4rem;
-}
+
 body {
   width: 100%;
   height: 100vh;
@@ -21,6 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Poppins", serif;
+  background-color: #dcdcdc;
 }
 
 .date-container {
@@ -47,14 +40,12 @@ body {
   width: 90vw;
   max-width: 400px;
   height: 80vh;
-
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   background: linear-gradient(70deg, black, #3d3d3d);
   background-size: 200% 200%;
   animation: gradientMove 5s infinite linear;
   margin: 0;
   border-radius: 2rem;
-
-  /* min-height: 200px; */
 }
 @keyframes gradientMove {
   0% {
@@ -69,19 +60,26 @@ body {
   height: 100%;
   width: 100%;
   padding-block: 1rem;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-.flex {
   display: flex;
-  /* display: none; */
   flex-direction: column;
   align-items: center;
-  transform: scale(1);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-.hidden {
-  display: none;
-  transform: scale(0.8);
+.page1,
+.page2 {
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
+.page2 {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+.page2.show {
+  opacity: 1;
+  transform: scaleX(1);
+  pointer-events: auto;
+}
+
 .banner {
   width: 100%;
   height: 3rem;
@@ -103,6 +101,7 @@ body {
   color: #efefef;
   cursor: pointer;
 }
+
 .fa-solid:hover,
 .fa-brands:hover {
   filter: brightness(90%);
@@ -111,7 +110,7 @@ h1 {
   color: #076d08;
   font-size: 2.1rem;
   margin-top: 1rem;
-  /* line-height: 5rem; */
+
   font-weight: 800;
 }
 .desc {
@@ -123,7 +122,7 @@ h1 {
   bottom: 2.5rem;
   width: 80%;
   height: 24rem;
-  z-index: -1;
+  z-index: 1;
 }
 .show-details {
   background-color: #076d08;
@@ -138,7 +137,7 @@ h1 {
   z-index: 9999;
   position: absolute;
   transition: all 0.3s ease;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 .show-details:hover {
   filter: brightness(115%);
@@ -150,21 +149,23 @@ h1 {
   transform: translateY(1px);
 }
 .page2 {
-  /* display: flex; */
-
-  /* flex-direction: column;
-  align-items: center; */
   position: relative;
+
   height: 100%;
   width: 100%;
   padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .back {
   color: #076d08;
   position: absolute;
-  left: 1rem;
+  left: 1.5rem;
   top: 1.5rem;
-  font-size: 1rem;
+  font-weight: 900;
+  font-size: 1.5rem;
 }
 .img-page2 {
   height: 5rem;
@@ -177,10 +178,10 @@ h2.page2 {
   margin-left: 9rem;
   color: #efefef;
   font-weight: 500;
-  /* margin-bottom: 0; */
+  z-index: 100;
 }
 p.email {
-  margin-top: -24rem;
+  margin-top: -25rem;
   color: azure;
 }
 p.brief-about {
@@ -191,54 +192,52 @@ p.brief-about {
 }
 div.bio {
   width: 100%;
-  height: 16rem;
+  height: 14rem;
   background-color: #efefef;
   margin-top: 1.5rem;
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
 }
-.banner2 {
-  height: 2.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-weight: 800;
-  color: #3d3d3d;
-  & span {
-    cursor: pointer;
-  }
-}
-.active-span {
-  text-decoration: underline;
-  text-decoration-color: #076d08;
-}
-div.wrapper {
-  height: 12rem;
-  box-sizing: border-box;
-  & p {
-    font-size: 15px;
-  }
-}
+
 .bio-content {
   height: 100%;
   width: 100%;
   padding-inline: 3rem;
-  padding-bottom: 15px;
-  box-sizing: border-box;
-}
-/* .hide {
-  /* opacity: 0; 
-  display: none;
-  transform: translateY(10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  pointer-events: none;
-}
-
-.show {
+  padding-block: 15px;
   display: flex;
-  /* opacity: 1; 
-  transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  pointer-events: all;
-} */
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+.contact-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.contact-box i {
+  color: #076d08;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.location,
+.tel {
+  width: 48%;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  & p {
+    font-weight: 600;
+  }
+}
+p.location {
+  width: 7rem;
+}
+p.tel {
+  width: 6rem;
+  margin-right: 1rem;
+}
+.contact-box i:hover {
+  filter: brightness(120%);
+}
